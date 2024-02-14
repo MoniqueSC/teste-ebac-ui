@@ -27,6 +27,7 @@ afterEach (
         cy.get('.woocommerce-form > .button').click()
         cy.get('.woocommerce-error').should('contain' , 'Endereço de e-mail desconhecido. Verifique novamente ou tente seu nome de usuário.')
     });
+    
     it('Deve exibir uma mensagem de erro ao inserir senha inválida', () => {
         cy.get('#username').type('monique.teste@teste.com.br')
         cy.get('#password').type('te@123')
